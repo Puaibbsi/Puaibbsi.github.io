@@ -135,7 +135,7 @@
             <div class="col-xl-3 col-lg-4 col-sm-6">
               <div class="product text-center">
                 <div class="position-relative mb-3">
-                  <div class="badge text-white bg-"></div><a class="d-block" ><img class="img-fluid w-100" src="img/p-1.jpg" alt="..."></a>
+                  <div class="badge text-white bg-"></div><a class="d-block" href="detail.html?k=p-1"><img class="img-fluid w-100" src="img/p-1.jpg" alt="..."></a>
                   <div class="product-overlay">
                     <ul class="mb-0 list-inline">
                       <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
@@ -152,7 +152,7 @@
             <div class="col-xl-3 col-lg-4 col-sm-6">
               <div class="product text-center">
                 <div class="position-relative mb-3">
-                  <div class="badge text-white bg-primary"></div><a class="d-block"><img class="img-fluid w-100" src="img/p-2.jpg" alt="..."></a>
+                  <div class="badge text-white bg-primary"></div><a class="d-block" href="detail.html?k=p-2"><img class="img-fluid w-100" src="img/p-2.jpg" alt="..."></a>
                   <div class="product-overlay">
                     <ul class="mb-0 list-inline">
                       <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
@@ -169,7 +169,7 @@
             <div class="col-xl-3 col-lg-4 col-sm-6">
               <div class="product text-center">
                 <div class="position-relative mb-3">
-                  <div class="badge text-white bg-"></div><a class="d-block" ><img class="img-fluid w-100" src="img/p-3.jpg" alt="..."></a>
+                  <div class="badge text-white bg-"></div><a class="d-block" href="detail.html?k=p-3"><img class="img-fluid w-100" src="img/p-3.jpg" alt="..."></a>
                   <div class="product-overlay">
                     <ul class="mb-0 list-inline">
                       <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
@@ -186,7 +186,7 @@
             <div class="col-xl-3 col-lg-4 col-sm-6">
               <div class="product text-center">
                 <div class="position-relative mb-3">
-                  <div class="badge text-white bg-info"></div><a class="d-block" ><img class="img-fluid w-100" src="img/p-4.jpg" alt="..."></a>
+                  <div class="badge text-white bg-info"></div><a class="d-block" href="detail.html?k=p-4"><img class="img-fluid w-100" src="img/p-4.jpg" alt="..."></a>
                   <div class="product-overlay">
                     <ul class="mb-0 list-inline">
                       <li class="list-inline-item m-0 p-0"><a class="btn btn-sm btn-outline-dark" href="#!"><i class="far fa-heart"></i></a></li>
@@ -317,7 +317,48 @@
       <script src="vendor/nouislider/nouislider.min.js"></script>
       <script src="vendor/swiper/swiper-bundle.min.js"></script>
       <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+      <script src="https://cdn.staticfile.net/jquery/1.10.2/jquery.min.js"></script>
+
       <script src="js/front.js"></script>
+      <script>
+        $(document).ready(function(){
+          var data = [
+            {
+              "id":"p-1",
+              "img":"img/p-1.jpg",
+              "desc":"PUAIBBSI Truck Inflator Kit, 3/8''×50ft Hybrid Air Hose with 1/4''MNPT Endings, Universal Glad Hand&Chuck",
+              "price":"$36.99"
+            },
+            {
+              "id":"p-2",
+              "img":"img/p-2.jpg",
+              "desc":"PUAIBBSI Elite 25 Foot Oxygen Acetylene Hose Twin Welding Hose Set, 1/4 Inch B Fittings, 9/16”-18 - Oxy Acetylene Cutting Torch Hoses, Welder Gas Hose Cut Metal, Green Red, Grade R, Fits Regulators",
+              "price":"$29.99"
+            },
+            {
+              "id":"p-3",
+              "img":"img/p-3.jpg",
+              "desc":"PUAIBBSI 105 & 106 Oxygen Acetylene Adaptors, A Size Torch/Regulator to B Hose",
+              "price":"$20.98"
+            },
+            {
+              "id":"p-4",
+              "img":"img/p-4.jpg",
+              "desc":"2PCS Welding Hose Coupler Adapter Set Torch Hose Repair Kit 9/16-18 LH&RH for Oxygen Acetylene Twin Hose",
+              "price":"$7.99"
+            }
+          ]
+          const map1 = new Map(
+                  data.map(object => {
+                    return [object['id'], object];
+                  }),
+          );
+          sessionStorage.obj = JSON.stringify(Object.fromEntries(map1));
+          console.log(sessionStorage.obj)
+
+
+        })
+      </script>
       <script>
         // ------------------------------------------------------- //
         //   Inject SVG Sprite - 
